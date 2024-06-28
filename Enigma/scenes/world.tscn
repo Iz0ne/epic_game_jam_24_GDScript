@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcg52x3nqvrus"]
+
+[ext_resource type="Script" path="res://scenes/scripts/world.gd" id="1_035xy"]
+
+[node name="World" type="Node"]
+script = ExtResource("1_035xy")
+
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
