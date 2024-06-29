@@ -11,11 +11,12 @@ script = ExtResource("1_035xy")
 
 [node name="Level" parent="." instance=ExtResource("2_40y32")]
 
+[node name="Camera2D" parent="." instance=ExtResource("4_tl5nd")]
+
 [node name="Player" parent="." instance=ExtResource("4_d3c11")]
 position = Vector2(192, 160)
 scale = Vector2(0.5, 0.5)
 
-[node name="Camera2D" parent="." instance=ExtResource("4_tl5nd")]
-
 [node name="Imitation" parent="." instance=ExtResource("5_6qn0q")]
+position = Vector2(-192, 160)
 scale = Vector2(0.5, 0.5)
