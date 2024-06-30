@@ -1,1 +1,1 @@
-Download both exe and pck files to run the game.
+Download either the .zip OR both .exe and .pck files to run the game.
