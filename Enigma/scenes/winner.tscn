@@ -1,0 +1,103 @@
+[gd_scene load_steps=9 format=3 uid="uid://b1562culbbk68"]
+
+[ext_resource type="Script" path="res://scenes/scripts/Winner.gd" id="1_w7epw"]
+[ext_resource type="FontFile" uid="uid://cks7e7mx1gtla" path="res://fonts/Dinofans.ttf" id="2_8c54i"]
+[ext_resource type="Texture2D" uid="uid://yk6sfmui5v87" path="res://textures/soup.webp" id="3_48xak"]
+[ext_resource type="Texture2D" uid="uid://cnib7n2ijnd41" path="res://textures/fireStarter.webp" id="4_y6f5i"]
+[ext_resource type="Texture2D" uid="uid://tbmphihq1uyv" path="res://textures/barbecue.png" id="5_67r47"]
+[ext_resource type="Texture2D" uid="uid://bs4jmibwwiql" path="res://textures/artichoke.png" id="6_twrba"]
+[ext_resource type="Texture2D" uid="uid://bg5cu8tjh15eq" path="res://textures/rainyCloud.png" id="6_waalr"]
+[ext_resource type="Texture2D" uid="uid://cvle55ydud8vg" path="res://textures/cookie.jpg" id="8_einej"]
+
+[node name="Winner" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_w7epw")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+metadata/_edit_lock_ = true
+
+[node name="Label_Win" type="Label" parent="Panel"]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 333.0
+theme_override_fonts/font = ExtResource("2_8c54i")
+theme_override_font_sizes/font_size = 64
+text = "You win!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button_replay" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -60.0
+offset_top = -90.0
+offset_right = 60.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_8c54i")
+theme_override_font_sizes/font_size = 24
+text = "replay"
+
+[node name="Label_music" type="Label" parent="."]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 682.0
+offset_right = 344.0
+offset_bottom = 705.0
+text = "Music: Pirouette (Special remix - EGJ 2024)"
+
+[node name="Label_statement" type="Label" parent="."]
+layout_mode = 0
+offset_left = 778.0
+offset_top = 655.0
+offset_right = 1269.0
+offset_bottom = 704.0
+text = "*Statement: Everything is an imitation of content avaible online
+and wasn't not downloaded."
+
+[node name="Sprite2D_soup" type="Sprite2D" parent="."]
+position = Vector2(207, 315)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("3_48xak")
+
+[node name="Sprite2D_fireStarter" type="Sprite2D" parent="."]
+position = Vector2(1100, 198)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("4_y6f5i")
+
+[node name="Sprite2D_barbecue" type="Sprite2D" parent="."]
+position = Vector2(905, 527)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("5_67r47")
+
+[node name="Sprite2D_artichoke" type="Sprite2D" parent="."]
+position = Vector2(530, 435)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("6_twrba")
+
+[node name="Sprite2D_rainyCloud" type="Sprite2D" parent="."]
+position = Vector2(912, 363)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("6_waalr")
+
+[node name="Sprite2D_cookie" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.12549)
+position = Vector2(640, 360)
+scale = Vector2(1.38829, 1.17073)
+texture = ExtResource("8_einej")
+metadata/_edit_lock_ = true
+
+[connection signal="pressed" from="Button_replay" to="." method="_on_button_replay_pressed"]
