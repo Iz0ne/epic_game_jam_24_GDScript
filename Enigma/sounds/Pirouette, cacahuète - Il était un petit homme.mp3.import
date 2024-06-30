@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bmhiry5mw0ri0"
+path="res://.godot/imported/Pirouette, cacahuète - Il était un petit homme.mp3-ab86a78cebcb5aa06019a06d5ad17139.mp3str"
+
+[deps]
+
+source_file="res://sounds/Pirouette, cacahuète - Il était un petit homme.mp3"
+dest_files=["res://.godot/imported/Pirouette, cacahuète - Il était un petit homme.mp3-ab86a78cebcb5aa06019a06d5ad17139.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
