@@ -11,9 +11,11 @@ config_version=5
 [application]
 
 config/name="Enigma"
+config/description="Game made during EGJ 2024."
+config/version="0.0.0.0.0.0.1"
 run/main_scene="res://scenes/world.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://textures/icon.svg"
+config/icon="res://textures/barbecue.png"
 
 [autoload]
 
