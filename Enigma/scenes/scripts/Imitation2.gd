@@ -18,9 +18,9 @@ func _physics_process(delta):
 	if Input.is_action_pressed('ui_down'):
 		velocity.y += 1
 	if Input.is_action_pressed('ui_left'):
-		velocity.x -= 1
-	if Input.is_action_pressed('ui_right'):
 		velocity.x += 1
+	if Input.is_action_pressed('ui_right'):
+		velocity.x -= 1
 		
 	if velocity.x > 0:
 		$AnimationPlayer.play("walkRight")
