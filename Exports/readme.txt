@@ -1,0 +1,1 @@
+Download both exe and pck files to run the game.
