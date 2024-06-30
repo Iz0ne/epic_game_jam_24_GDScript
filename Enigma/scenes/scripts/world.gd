@@ -30,16 +30,5 @@ func _process(delta):
 	if imitationTileData.get_custom_data("doCharacterDropped"):
 		print("Imitation Dropped : GameOver")
 		get_tree().reload_current_scene()
-	
-	#if playerTileData:
-		#var doPlayerDropped = playerTileData.get_custom_data(doCharacterDroppedCustomData)
-		#if doPlayerDropped:
-			#print("Player Dropped : GameOver")
-			#get_tree().reload_current_scene()
-#
-	#if imitationTileData:
-		#var doImitationDropped = imitationTileData.get_custom_data(doCharacterDroppedCustomData)
-		#if doImitationDropped:
-			#print("Imitation Dropped : GameOver")
-			#get_tree().reload_current_scene()
-		
+	if imitationTileData.get_custom_data("reachedChest"):
+		get_tree().change_scene_to_file("res://scenes/winner.tscn")
