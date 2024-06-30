@@ -1,7 +1,7 @@
 extends Node
 @onready var level = $Level
 
-var doCharacterDroppedCustomData : String = "doCharacterDropped"
+#var doCharacterDroppedCustomData : String = "doCharacterDropped"
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -20,12 +20,26 @@ func _process(delta):
 	var playerTileData : TileData = level.get_cell_tile_data(0,playerPosition)
 	var imitationTileData : TileData = level.get_cell_tile_data(0,imitationPosition)
 	
-	if playerTileData:
-		var doPlayerDropped = playerTileData.get_custom_data(doCharacterDroppedCustomData)
-		if doPlayerDropped:
-			print("Player Dropped : GameOver")
-
-	if imitationTileData:
-		var doImitationDropped = imitationTileData.get_custom_data(doCharacterDroppedCustomData)
-		if doImitationDropped:
-			print("Imitation Dropped : GameOver")
+	print(playerTileData.get_custom_data("doCharacterDropped"))
+	if playerTileData.get_custom_data("doCharacterDropped"):
+		print("Player Dropped : GameOver")
+		get_tree().reload_current_scene()
+	if playerTileData.get_custom_data("reachedChest"):
+		get_tree().change_scene_to_file("res://scenes/winner.tscn")
+	
+	if imitationTileData.get_custom_data("doCharacterDropped"):
+		print("Imitation Dropped : GameOver")
+		get_tree().reload_current_scene()
+	
+	#if playerTileData:
+		#var doPlayerDropped = playerTileData.get_custom_data(doCharacterDroppedCustomData)
+		#if doPlayerDropped:
+			#print("Player Dropped : GameOver")
+			#get_tree().reload_current_scene()
+#
+	#if imitationTileData:
+		#var doImitationDropped = imitationTileData.get_custom_data(doCharacterDroppedCustomData)
+		#if doImitationDropped:
+			#print("Imitation Dropped : GameOver")
+			#get_tree().reload_current_scene()
+		
